@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="static/Assets/Image/portada.jpeg" alt="Kriptom" width="auto">
+  <img src="APPHome/static/APPHome/img/portada_github.png" alt="Coffee Organic Life" width="100%">
 </p>
 
 # Coffee Organic Life ☕

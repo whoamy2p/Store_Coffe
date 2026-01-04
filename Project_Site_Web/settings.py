@@ -21,12 +21,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1v-@#ohl&-lt4i98u)@%zf5c%5-tst0#7cvbaw!0*=+qdrgmlo'
+SECRET_KEY = os.environ.get('SECRET_KEY', '1v-@#ohl&-lt4i98u)@%zf5c%5-tst0#7cvbaw!0*=+qdrgmlo')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
+
 
 
 # Application definition
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'Project_Site_Web.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default="sqlite:///db.sqlite3"
+        default=f"sqlite:///{os.path.join(BASE_DIR, 'db.sqlite3')}"
     )
 }
 
@@ -138,6 +139,6 @@ MEDIA_ROOT=os.path.join (BASE_DIR, "media")
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'fioces0608@gmail.com'
-EMAIL_HOST_PASSWORD = 'annie0608'
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 EMAIL_PORT = 587

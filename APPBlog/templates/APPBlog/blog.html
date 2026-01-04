@@ -1,0 +1,66 @@
+{% extends "APPHome/base.html" %}
+
+{% load static %}
+{% block tittle %} blog {% endblock %}
+
+{% block content %}
+<div class="my-container">
+    <div class="rows">
+        <div class="mgn-container">
+            <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                <section id="blog-container">
+                    <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                        <h2>blog</h2>
+                    </div>
+                    <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                        <nav class="nav-blog">
+                            {% for db_date in Data_blog %}
+                                <li><a href="{% url 'Categoria' db_date.id %}" title="categoria">{{db_date.nombre|upper}}</a></li>
+                            {% endfor %}
+                        </nav>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="rows">
+        <aside>
+            <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                <form action="" method="GET">{%csrf_token %}
+                    <div class="center-form">
+                        <input type="search" name="buscar" placeholder="Buscar...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>   
+            </div>
+        </aside>
+    </div>
+
+    <div class="rows">
+        <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12" style="background-color: rgb(243, 236, 236);">
+            <div class="mgn-container">
+                <section>
+                    {% for data_post in post %}
+                        <div class="my-col-xl-3 my-col-lg-3 my-col-md-3 my-col-sm-6 my-col-12" style=" margin-bottom: 25px;">
+                            <div class="container-box-products">
+                                <div class="color-div">
+                                    <img src="{{data_post.imagen.url}}" alt="post">
+
+                                    <p>{{data_post.autor}}  |  {{data_post.create}}</p>
+                                </div>
+                                <div class="color-div old" style="margin-top: 15px;">
+                                    <h3>{{data_post.titulo}}</h3>
+                                    <p>{{data_post.contenido}}</p>
+                                    <a href="#" title="mas">-- Seguir leyendo</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

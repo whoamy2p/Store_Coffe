@@ -1,0 +1,28 @@
+{% include "/APPtienda/templates/APPTienda/productos.html" %}
+<div class="my-container">
+    <div id="mgn">
+        <div class="rows">    
+            <section id="cards">
+                <div class="my-col-xl-9 my-col-lg-9 my-col-md-9 my-col-sm-12 my-col-12" style="background-color: rgb(240, 235, 235);">
+                    {% for data_post in data_products %}
+                        <div class="my-col-xl-3 my-col-lg-3 my-col-md-4 my-col-sm-6 my-col-12" style=" margin-bottom: 25px;">
+                            <div class="container-products">
+                                <div class="color-div">
+                                    <img src="{{data_post.imagen.url}}" alt="tienda producto">
+        
+                                    <p>{{data_post.create}}  |  por: La Montaña</p>
+                                </div>
+                                <div class="color-div opt" style="margin-top: 15px;">
+                                    <h3>{{data_post.titulo}}</h3>
+                                    <p>{{data_post.contenido}}</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+

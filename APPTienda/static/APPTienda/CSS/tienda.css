@@ -1,0 +1,560 @@
+/* ========================================
+   ESTILOS PROFESIONALES PARA TIENDA
+   Paleta: Café (#8B4513, #D2691E, #2c3e50)
+   ======================================== */
+
+/* ========================================
+   TÍTULO PRINCIPAL
+   ======================================== */
+#title-tienda div h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   BARRA DE BÚSQUEDA
+   ======================================== */
+aside div form {
+    width: 100%;
+    margin: 30px 0;
+}
+
+aside form .center-form {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+aside form .center-form:focus-within {
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.2);
+}
+
+aside form .center-form input {
+    flex: 1;
+    height: 40px;
+    border: none;
+    background: transparent;
+    padding-left: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+aside form .center-form input:focus {
+    outline: none;
+}
+
+aside form .center-form input::placeholder {
+    color: #999;
+}
+
+aside div form .center-form button {
+    width: 45px;
+    height: 40px;
+    border: none;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside div form .center-form button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
+}
+
+aside div form .center-form button>.fas {
+    font-size: 1.2em;
+}
+
+/* ========================================
+   PANEL LATERAL DE FILTROS
+   ======================================== */
+#baner h3 {
+    display: block;
+    padding: 25px;
+    color: white;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 15px 15px 0 0;
+}
+
+.container-baner {
+    padding: 25px;
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.container-baner section {
+    margin-bottom: 25px;
+}
+
+.container-baner section h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 15px;
+}
+
+/* Filtro de Precio */
+#one #money {
+    display: block;
+}
+
+.price-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.price-input-group {
+    flex: 1;
+}
+
+.price-input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.price-input-group input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.price-input-group input:focus {
+    outline: none;
+    border-color: #D2691E;
+}
+
+.apply-price-btn {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.apply-price-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+/* Filtro de Tipo */
+#two .formu-container {
+    width: 100%;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#two .container-chbx {
+    flex: 1;
+}
+
+.filter-option {
+    width: 100%;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-option:hover {
+    border-color: #D2691E;
+    background-color: #fff8f3;
+}
+
+.filter-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #8B4513;
+}
+
+.filter-option input[type="radio"]:checked+span {
+    color: #8B4513;
+    font-weight: 600;
+}
+
+.filter-option span {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.clear-filter-btn {
+    width: 100%;
+    padding: 10px;
+    background: #f0f0f0;
+    color: #666;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.clear-filter-btn:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+#two form .formu-container>p {
+    width: 40px;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #999;
+    font-weight: 600;
+}
+
+/* ========================================
+   CONTENEDOR DE PRODUCTOS
+   ======================================== */
+#mgn {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ========================================
+   TARJETAS DE PRODUCTOS
+   ======================================== */
+#cards div .container-products {
+    width: 95%;
+    margin: 0 auto 30px;
+    padding: 0;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#cards div .container-products:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.container-products .color-div {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+}
+
+img[alt^="tienda"] {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+#cards div .container-products:hover img[alt^="tienda"] {
+    transform: scale(1.08);
+}
+
+img[alt^="tienda"]+p {
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+.container-products div.opt {
+    padding: 20px 25px;
+}
+
+.container-products div.opt>h3 {
+    font-size: 1.3rem;
+    color: #8B4513;
+    padding-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.container-products div.opt>p {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 8px 0;
+    color: #555;
+}
+
+/* ========================================
+   INFORMACIÓN DE PRODUCTOS
+   ======================================== */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 10;
+    box-shadow: 0 3px 10px rgba(255, 165, 0, 0.4);
+}
+
+.product-badge i {
+    margin-right: 4px;
+}
+
+.product-description {
+    margin-bottom: 15px;
+    min-height: 60px;
+}
+
+.product-info {
+    border-top: 2px solid #f0f0f0;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.product-price {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    border-radius: 10px;
+}
+
+.product-price i {
+    color: #fff;
+    margin-right: 8px;
+}
+
+.product-price .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.product-details {
+    margin-top: 12px;
+}
+
+.product-details p {
+    font-size: 0.9rem;
+    margin: 8px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-details i {
+    color: #8B4513;
+    font-size: 1rem;
+    min-width: 20px;
+}
+
+.product-details strong {
+    color: #333;
+}
+
+.stock-status {
+    margin-top: 12px !important;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.stock-status.in-stock {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.stock-status.out-stock {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.stock-status i {
+    margin-right: 6px;
+}
+
+/* Mensaje de no productos */
+.no-products {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.no-products i {
+    font-size: 4rem;
+    color: #D2691E;
+    margin-bottom: 20px;
+}
+
+.no-products h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.no-products p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* ========================================
+   MEDIA QUERIES - LAPTOP
+   ======================================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #title-tienda div h2 {
+        font-size: 2.6rem;
+    }
+
+    img[alt^="tienda"] {
+        height: 260px;
+    }
+
+    .product-price .price {
+        font-size: 1.3rem;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TABLET
+   ======================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+    #title-tienda div h2 {
+        font-size: 2.4rem;
+    }
+
+    img[alt^="tienda"] {
+        height: 260px;
+    }
+
+    aside form .center-form {
+        width: 85%;
+    }
+
+    .product-details p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TELÉFONOS HORIZONTAL
+   ======================================== */
+@media (min-width: 576px) and (max-width: 767px) {
+    #title-tienda div h2 {
+        font-size: 2rem;
+    }
+
+    aside form .center-form {
+        width: 95%;
+    }
+
+    img[alt^="tienda"] {
+        height: 240px;
+    }
+
+    #baner h3 {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+
+    .product-price .price {
+        font-size: 1.2rem;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TELÉFONOS VERTICAL
+   ======================================== */
+@media (max-width:575px) {
+    #title-tienda div h2 {
+        font-size: 1.8rem;
+        margin-top: 20px;
+    }
+
+    aside div form {
+        width: 100%;
+    }
+
+    aside form .center-form {
+        width: 95%;
+    }
+
+    img[alt^="tienda"] {
+        height: 220px;
+    }
+
+    .container-products div.opt>h3 {
+        font-size: 1.2rem;
+    }
+
+    #baner h3 {
+        font-size: 1rem;
+        padding: 18px;
+    }
+
+    .container-baner {
+        padding: 20px 15px;
+    }
+
+    .product-price .price {
+        font-size: 1.1rem;
+    }
+
+    .product-details p {
+        font-size: 0.85rem;
+    }
+}

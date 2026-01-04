@@ -1,0 +1,320 @@
+/* ========================================
+   ESTILOS PROFESIONALES PARA BLOG
+   Paleta: Café (#8B4513, #D2691E, #2c3e50)
+   ======================================== */
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.mgn-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+section#blog-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ========================================
+   TÍTULO PRINCIPAL
+   ======================================== */
+section#blog-container h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   NAVEGACIÓN DE CATEGORÍAS
+   ======================================== */
+.nav-blog {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.nav-blog li {
+    display: inline-block;
+    padding: 0 15px;
+    margin: 5px;
+}
+
+a[title="categoria"] {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+a[title="categoria"]:hover {
+    color: #fff;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+/* ========================================
+   BARRA DE BÚSQUEDA
+   ======================================== */
+aside div form {
+    width: 100%;
+    margin: 30px 0;
+}
+
+aside form .center-form {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+aside form .center-form:focus-within {
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.2);
+}
+
+aside form .center-form input {
+    flex: 1;
+    height: 40px;
+    border: none;
+    background: transparent;
+    padding-left: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+aside form .center-form input:focus {
+    outline: none;
+}
+
+aside form .center-form input::placeholder {
+    color: #999;
+}
+
+aside div form .center-form button {
+    width: 45px;
+    height: 40px;
+    border: none;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside div form .center-form button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
+}
+
+aside div form .center-form button>.fas {
+    font-size: 1.2em;
+}
+
+/* ========================================
+   TARJETAS DE BLOG
+   ======================================== */
+section div .container-box-products {
+    width: 95%;
+    margin: 0 auto 30px;
+    padding: 0;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+section div .container-box-products:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.color-div {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+}
+
+img[alt="post"] {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+section div .container-box-products:hover img[alt="post"] {
+    transform: scale(1.08);
+}
+
+img[alt="post"]+p {
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+.container-box-products div.old {
+    padding: 20px 25px;
+}
+
+.container-box-products div.old>h3 {
+    font-size: 1.4rem;
+    color: #8B4513;
+    padding-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.container-box-products div.old>p {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 8px 0;
+    color: #555;
+}
+
+a[title="mas"] {
+    color: #D2691E;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+a[title="mas"]:hover {
+    color: #8B4513;
+    text-decoration: none;
+}
+
+/* ========================================
+   MEDIA QUERIES - LAPTOP
+   ======================================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    section#blog-container h2 {
+        font-size: 2.6rem;
+    }
+
+    img[alt="post"] {
+        height: 280px;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TABLET
+   ======================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+    section#blog-container h2 {
+        font-size: 2.4rem;
+    }
+
+    img[alt="post"] {
+        height: 260px;
+    }
+
+    aside form .center-form {
+        width: 85%;
+    }
+
+    .nav-blog {
+        width: 95%;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TELÉFONOS HORIZONTAL
+   ======================================== */
+@media (min-width: 576px) and (max-width: 767px) {
+    section#blog-container h2 {
+        font-size: 2rem;
+    }
+
+    .nav-blog {
+        width: 95%;
+        padding: 15px 10px;
+    }
+
+    .nav-blog li {
+        padding: 0 8px;
+    }
+
+    aside form .center-form {
+        width: 95%;
+    }
+
+    img[alt="post"] {
+        height: 240px;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TELÉFONOS VERTICAL
+   ======================================== */
+@media (max-width:575px) {
+    section#blog-container h2 {
+        font-size: 1.8rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .nav-blog {
+        width: 100%;
+        padding: 15px 5px;
+    }
+
+    .nav-blog li {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    a[title="categoria"] {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    aside div form {
+        width: 100%;
+    }
+
+    aside form .center-form {
+        width: 95%;
+    }
+
+    img[alt="post"] {
+        height: 220px;
+    }
+
+    .container-box-products div.old>h3 {
+        font-size: 1.2rem;
+    }
+}

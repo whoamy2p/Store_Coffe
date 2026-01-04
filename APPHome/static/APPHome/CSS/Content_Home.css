@@ -1,0 +1,275 @@
+/* ========================================
+   ESTILOS ESPECÍFICOS PARA HOME
+   ======================================== */
+
+/* ========================================
+   SECCIÓN 1 - INTRODUCCIÓN
+   ======================================== */
+section#first-section {
+    padding: 40px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+section#first-section div div header>h2 {
+    text-transform: uppercase;
+    color: #2c3e50;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+article#text {
+    padding: 20px 35px;
+}
+
+article#text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+#img1 {
+    width: 70%;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#img1:hover {
+    transform: translateY(-5px);
+}
+
+#img1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   SECCIÓN 2 - ESPECIALIDAD
+   ======================================== */
+section#second-section {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.location-h2 h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin: 30px 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.container-picture-rowscols {
+    width: 95%;
+    overflow: hidden;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.width-border {
+    width: 95%;
+    margin: 0 auto 15px;
+    border: 3px solid #8B4513;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+    transition: all 0.3s ease;
+}
+
+.width-border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(139, 69, 19, 0.3);
+}
+
+img[alt="cafetalero"],
+img[alt="tostadora"],
+img[alt="cafee"] {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.width-border:hover img {
+    transform: scale(1.05);
+}
+
+.width-border~p {
+    text-align: center;
+    color: #333;
+    margin: 15px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* ========================================
+   SECCIÓN 3 - PRODUCTOS
+   ======================================== */
+section#third-section {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    padding: 50px 0;
+}
+
+#width-and-hight {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.wth-box {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.space-box {
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.space-box:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+}
+
+img[alt="Productos"] {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.space-box:hover img[alt="Productos"] {
+    transform: scale(1.05);
+}
+
+#style- {
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.wth-box>h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #8B4513;
+    font-weight: 600;
+    margin: 10px 0;
+    letter-spacing: 0.3px;
+}
+
+/* ========================================
+   MEDIA QUERIES - LAPTOP
+   ======================================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    section#first-section div div header>h2 {
+        font-size: 2.2em;
+    }
+
+    article#text p {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TABLET
+   ======================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+    section#first-section div div header>h2 {
+        font-size: 2em;
+    }
+
+    img[alt="cafetalero"],
+    img[alt="tostadora"],
+    img[alt="cafee"] {
+        height: 350px;
+    }
+
+    img[alt="Productos"] {
+        height: 280px;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TELÉFONOS HORIZONTAL
+   ======================================== */
+@media (min-width: 576px) and (max-width: 767px) {
+    section#first-section div div header>h2 {
+        font-size: 1.8em;
+    }
+
+    .location-h2 h2 {
+        font-size: 1.8rem;
+    }
+
+    article#text {
+        padding: 15px 20px;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TELÉFONOS VERTICAL
+   ======================================== */
+@media (max-width:575px) {
+    section#first-section div div header>h2 {
+        font-size: 1.6em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .location-h2 h2 {
+        font-size: 1.6rem;
+        margin: 20px 0;
+    }
+
+    article#text {
+        padding: 15px 20px;
+    }
+
+    article#text p {
+        font-size: 0.95rem;
+    }
+
+    img[alt="cafetalero"],
+    img[alt="tostadora"],
+    img[alt="cafee"] {
+        width: 100%;
+        height: 280px;
+    }
+
+    .width-border {
+        width: 95%;
+        margin: 0 auto 15px;
+    }
+
+    img[alt="Productos"] {
+        height: 250px;
+    }
+
+    .wth-box>h3 {
+        font-size: 1.1rem;
+    }
+}

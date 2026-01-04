@@ -1,0 +1,132 @@
+{% extends "APPHome/base.html" %}
+
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<div class="my-container">
+    <section id="first-section">
+        <div class="rows">
+            <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                <header>
+                    <h2>Coffe Organic Fundo Parnazo</h2>
+                </header>
+            </div>
+            <div class="my-col-xl-6 my-col-lg-6 my-col-md-6 my-col-sm-12 my-col-12">
+                <article id="text">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex maiores voluptatem perferendis quae
+                        sed quibusdam veniam rerum illum, cupiditate qui. Corporis explicabo officiis, illo quos neque,
+                        excepturi perspiciatis distinctio aut consequatur soluta aspernatur veniam, earum error tenetur
+                        dolorem quas? Quaerat in nam harum earum odio dicta libero ad odit culpa.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis qui in vitae voluptatum cumque
+                        velit libero animi sunt, aliquid perferendis rerum temporibus deleniti possimus autem iusto
+                        placeat optio odio, architecto ullam, incidunt dignissimos. Commodi vel, officiis numquam hic
+                        eius quae nobis nisi, quisquam inventore voluptates deserunt explicabo eum ad neque aliquam!
+                        Necessitatibus id quis itaque illum ipsam sint, est cum.</p>
+                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita natus atque excepturi
+                        alias odit eligendi voluptatum molestias et illum, facere vel saepe similique voluptatibus
+                        tenetur esse praesentium sequi? Quibusdam voluptas maxime fugiat repellat reprehenderit
+                        voluptates ullam totam ea qui recusandae quisquam consequuntur vitae hic provident, aspernatur
+                        veniam, at tempore accusantium? Magni eum, earum nostrum praesentium error cumque exercitationem
+                        nulla illum, ea a iure autem, eos tempora aliquid quia consequuntur?</P>
+                </article>
+            </div>
+            <div class="my-col-xl-6 my-col-lg-6 my-col-md-6 my-col-sm-12 my-col-12">
+                <article id="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt reprehenderit voluptatem velit,
+                        voluptate cupiditate dolorem quas quos eos aut ullam dolor veniam? Quas architecto, itaque
+                        doloremque possimus ex in eveniet fuga voluptate ea cumque libero, similique, repellat aperiam?
+                        Quos commodi aliquid earum reiciendis asperiores ex molestiae amet incidunt aperiam repellendus?
+                    </p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci officia possimus dolorum,
+                        eveniet hic a nostrum omnis accusamus nulla, in debitis, delectus eum placeat! Sequi fuga
+                        nostrum voluptas sit sapiente recusandae, possimus officiis dignissimos cupiditate ullam quos
+                        vel incidunt consectetur asperiores esse tempora, ipsam veniam. Dolorem assumenda officiis neque
+                        nobis.</p>
+                </article>
+
+                <div id="img1">
+                    <picture>
+                        <source
+                            srcset="{% static 'APPHome/img/Perfil/perfil_dueño.webp' %}, {% static 'APPHome/img/Perfil/perfil_dueño.png' %}">
+                        <img src="{% static 'APPHome/img/Perfil/perfil_dueño.jpg' %}" alt="Perfil">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="second-section">
+        <div class="rows">
+            <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                <header class="location-h2">
+                    <h2>Nuestra especialidad</h2>
+                </header>
+            </div>
+        </div>
+
+        <div class="rows">
+            <div class="container-picture-rowscols">
+                <div class="my-col-xl-4 my-col-lg-4 my-col-md-4 my-col-sm-6 my-col-12">
+                    <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                        <div class="width-border">
+                            <img src="{% static 'APPHome/img/especialidad/cafetalero.jpg' %}" alt="cafetalero">
+                        </div>
+                        <p>Contamos con nuestro laboratorio, control de calidad y tostado de café.</p>
+                    </div>
+                </div>
+
+                <div class="my-col-xl-4 my-col-lg-4 my-col-md-4 my-col-sm-6 my-col-12">
+                    <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                        <div class="width-border">
+                            <img src="{% static 'APPHome/img/especialidad/tostadora.jpg' %}" alt="tostadora">
+                        </div>
+                        <p>Contamos con nuestro laboratorio, control de calidad y tostado de café.</p>
+                    </div>
+                </div>
+
+                <div class="my-col-xl-4 my-col-lg-4 my-col-md-4 my-col-sm-12 my-col-12">
+                    <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                        <div class="width-border">
+                            <img src="{% static 'APPHome/img/especialidad/tostadora.jpg' %}" alt="tostadora">
+                        </div>
+                        <p>Contamos con nuestro laboratorio, control de calidad y tostado de café.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="third-section">
+        <div class="rows">
+            <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                <header class="location-h2">
+                    <h2>Nuestros Productos</h2>
+                </header>
+            </div>
+        </div>
+
+        <div class="rows">
+            <div id="width-and-hight">
+                {% for products in data %}
+                <div class="my-col-xl-3 my-col-lg-3 my-col-md-4 my-col-sm-6 my-col-12">
+                    <div class="space-box">
+                        <div class="wth-box">
+                            <img src="{{products.image.url}}" alt="Productos">
+                        </div>
+                        <div class="wth-box" id="style-">
+                            <h3>{{products.titulo}}</h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{% endblock %}
+

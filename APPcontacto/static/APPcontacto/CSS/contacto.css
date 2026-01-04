@@ -1,0 +1,379 @@
+/* ========================================
+   ESTILOS PROFESIONALES PARA CONTACTO
+   Paleta: Café (#8B4513, #D2691E, #2c3e50)
+   ======================================== */
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.pdg-col-1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/* ========================================
+   TÍTULO PRINCIPAL
+   ======================================== */
+header[class^="col"] h2,
+header[class*="my-col"] h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+    margin: 20px 0 30px;
+    padding: 25px 0;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================
+   TEXTO INFORMATIVO
+   ======================================== */
+.pdg-col-1 div>p {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.pdg-col-1 div>p>span {
+    font-weight: 500;
+    color: #333;
+}
+
+/* ========================================
+   FORMULARIO DE CONTACTO
+   ======================================== */
+.width-forms {
+    width: 100%;
+    margin: 20px 0;
+}
+
+form#form-email {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+form#form-email table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+form#form-email table tr th {
+    text-align: left;
+    padding: 10px 15px 10px 0;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+form#form-email table tr td {
+    padding: 10px 0;
+}
+
+form#form-email table tr td input,
+form#form-email table tr td textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+form#form-email table tr td input:focus,
+form#form-email table tr td textarea:focus {
+    outline: none;
+    border-color: #D2691E;
+    box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.1);
+}
+
+form#form-email table tr td textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button.style-button {
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    border-radius: 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    letter-spacing: 0.5px;
+}
+
+form button.style-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+}
+
+form button.style-button:active {
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   REDES SOCIALES
+   ======================================== */
+.navigation-icon {
+    margin-top: 40px;
+}
+
+.navigation-icon h3 {
+    font-size: 1.4rem;
+    padding-bottom: 25px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+nav.redes- ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav.redes- ul li {
+    display: inline-block;
+}
+
+.config-icon {
+    font-size: 2.2rem;
+    padding: 18px;
+    border-radius: 50%;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.config-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores de bordes por red social */
+.border-style-discord {
+    border-bottom-color: #5865F2;
+}
+
+.border-style-instagram {
+    border-bottom-color: #E1306C;
+}
+
+.border-style-facebook {
+    border-bottom-color: #1877F2;
+}
+
+.border-style-twitter {
+    border-bottom-color: #1DA1F2;
+}
+
+.border-style-whatsapp {
+    border-bottom-color: #25D366;
+}
+
+.border-style-telegram {
+    border-bottom-color: #0088cc;
+}
+
+/* Colores de iconos por red social */
+.color-discord {
+    color: #5865F2;
+    background-color: #f0f0ff;
+}
+
+.color-instagram {
+    color: #E1306C;
+    background-color: #fff0f5;
+}
+
+.color-facebook {
+    color: #1877F2;
+    background-color: #f0f5ff;
+}
+
+.color-twitter {
+    color: #1DA1F2;
+    background-color: #f0f8ff;
+}
+
+.color-whatsapp {
+    color: #25D366;
+    background-color: #f0fff4;
+}
+
+.color-telegram {
+    color: #0088cc;
+    background-color: #f0f8ff;
+}
+
+/* ========================================
+   INFORMACIÓN DE CONTACTO
+   ======================================== */
+.pdg-col-1>p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 15px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pdg-col-1>p i {
+    color: #D2691E;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   MAPA
+   ======================================== */
+#mapa {
+    width: 100%;
+    height: 750px;
+    margin-top: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   MEDIA QUERIES - LAPTOP
+   ======================================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    header[class^="col"] h2,
+    header[class*="my-col"] h2 {
+        font-size: 2.2rem;
+    }
+
+    #mapa {
+        height: 400px;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TABLET
+   ======================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    header[class^="col"] h2,
+    header[class*="my-col"] h2 {
+        font-size: 2rem;
+    }
+
+    .pdg-col-1 {
+        padding: 20px;
+    }
+
+    #mapa {
+        height: 350px;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TELÉFONOS HORIZONTAL
+   ======================================== */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    header[class^="col"] h2,
+    header[class*="my-col"] h2 {
+        font-size: 1.8rem;
+        padding: 20px 0;
+    }
+
+    .pdg-col-1 {
+        padding: 15px;
+    }
+
+    form#form-email {
+        padding: 25px 20px;
+    }
+
+    form button.style-button {
+        width: 180px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    #mapa {
+        height: 300px;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TELÉFONOS VERTICAL
+   ======================================== */
+@media (max-width:575px) {
+
+    header[class^="col"] h2,
+    header[class*="my-col"] h2 {
+        font-size: 1.6rem;
+        padding: 18px 0;
+        margin: 15px 0 20px;
+    }
+
+    .pdg-col-1 {
+        padding: 15px 10px;
+    }
+
+    .pdg-col-1 div>p {
+        font-size: 0.95rem;
+    }
+
+    form#form-email {
+        padding: 20px 15px;
+    }
+
+    form#form-email table tr th {
+        font-size: 0.9rem;
+    }
+
+    form#form-email table tr td input,
+    form#form-email table tr td textarea {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+
+    form button.style-button {
+        width: 100%;
+        max-width: 250px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .navigation-icon h3 {
+        font-size: 1.2rem;
+        padding-bottom: 20px;
+    }
+
+    .config-icon {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .pdg-col-1>p {
+        font-size: 0.95rem;
+    }
+
+    #mapa {
+        height: 250px;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,81 @@
+{% extends "APPHome/base.html" %}
+
+{% load static %}
+
+{% block title %} Contáctanos {% endblock %}
+
+{% block content %}
+
+<div class="my-container">
+    <div style="width: 90%; margin: 0 auto; height: auto;">
+        <div class="rows">
+            <header class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                <h2>Contáctanos</h2>
+            </header>
+            <div class="my-col-xl-6 my-col-lg-6 my-col-md-6 my-col-sm-12 my-col-12">
+                <div class="pdg-my-col-1">
+                    <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                        <p><span>Usted desea contactarse con nosotros, complete el siguiente formulario
+                                y recibirá una respuesta lo más pronto posible.</span></p>
+                    </div>
+
+                    <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                        <div class="width-forms">
+                            <form action="" method="POST" id="form-email">{% csrf_token %}
+                                <table>{{Forms.as_table}}</table>
+                                <button type="submit" class="style-button">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                        <div class="navigation-icon">
+                            <h3>Siguenos en:</h3>
+                            <nav class="redes-">
+                                <ul class="list-nav redes-nav">
+                                    <li class="config-icon border-style-discord"><a href="#" target="__blank"><i
+                                                class="fab fa-discord color-discord"></i></a></li>
+                                    <li class="config-icon border-style-instagram"><a href="#" target="__blank"><i
+                                                class="fab fa-instagram color-instagram"></i></a></li>
+                                    <li class="config-icon border-style-facebook"><a href="#" target="__blank"><i
+                                                class="fab fa-facebook color-facebook"></i></a></li>
+                                    <li class="config-icon border-style-twitter"><a href="#" target="__blank"><i
+                                                class="fab fa-twitter-square color-twitter"></i></a></li>
+                                    <li class="config-icon border-style-whatsapp"><a href="#" target="__blank"><i
+                                                class="fab fa-whatsapp color-whatsapp"></i></a></li>
+                                    <li class="config-icon border-style-telegram"><a href="#" target="__blank"><i
+                                                class="fab fa-telegram color-telegram"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="my-col-xl-6 my-col-lg-6 my-col-md-6 my-col-sm-12 my-col-12">
+                <div style="width: 100%; padding: 0 0 0 15px;">
+                    <p><i class="fas fa-envelope"></i> CoffeOrganic@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +51 07700 457</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Heladeros 160 Cusco, Cusco, Perú</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Santa Catalina Angosta 175</p>
+
+                    <div id="mapa"></div>
+                    <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgZZK8umUqJn8d5CoIZqWPJ_qtMfqD9q0&callback=initMap"
+                        async defer>
+                        </script>
+
+                    <script>
+                        function initMap() {
+                            mapa = new google.maps.Map(document.getElementById("mapa"), { center: { lat: -10.9531, lng: -75.2256 }, zoom: 18 });
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,177 @@
+{% extends "APPHome/base.html" %}
+
+{% load static %}
+
+{% block title %} Tienda {% endblock %}
+
+{% block content %}
+
+<div class="my-container">
+    <div class="rows">
+        <section id="title-tienda">
+            <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                <h2>Nuestros Productos</h2>
+            </div>
+        </section>
+    </div>
+
+    <div class="rows">
+        <aside>
+            <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                <form action="" method="GET" id="searchForm">
+                    <div class="center-form">
+                        <input type="search" name="buscar" placeholder="Buscar..." value="{{buscar_actual}}">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <div id="mgn">
+        <div class="rows">
+            <section id="baner">
+                <div class="my-col-xl-3 my-col-lg-3 my-col-md-3 my-col-sm-12 my-col-12">
+                    <h3>Filtrar resultados</h3>
+                    <div class="container-baner">
+                        <form method="GET" action="" id="filterForm">
+                            {% if buscar_actual %}
+                            <input type="hidden" name="buscar" value="{{buscar_actual}}">
+                            {% endif %}
+
+                            <section id="one">
+                                <h4>Precio</h4>
+                                <div id="money">
+                                    <div class="price-inputs">
+                                        <div class="price-input-group">
+                                            <label>Min.</label>
+                                            <input type="number" name="precio_min" id="precioMin"
+                                                min="{{precio_minimo}}" max="{{precio_maximo}}"
+                                                value="{% if precio_min_actual %}{{precio_min_actual}}{% else %}{{precio_minimo}}{% endif %}"
+                                                placeholder="S/ {{precio_minimo}}">
+                                        </div>
+                                        <div class="price-input-group">
+                                            <label>Max.</label>
+                                            <input type="number" name="precio_max" id="precioMax"
+                                                min="{{precio_minimo}}" max="{{precio_maximo}}"
+                                                value="{% if precio_max_actual %}{{precio_max_actual}}{% else %}{{precio_maximo}}{% endif %}"
+                                                placeholder="S/ {{precio_maximo}}">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="apply-price-btn">Aplicar</button>
+                                </div>
+                            </section>
+
+                            <section id="two">
+                                <h4>Grano o Molido</h4>
+                                {% for opcion in opciones_filtro %}
+                                <div class="formu-container">
+                                    <div class="container-chbx">
+                                        <label class="filter-option">
+                                            <!-- Eliminado el checked condicional para evitar error de sintaxis -->
+                                            <input type="radio" value="{{opcion.valor}}" name="grano"
+                                                id="filtro_{{forloop.counter}}" onchange="this.form.submit()">
+                                            <span>{{opcion.nombre}}</span>
+                                        </label>
+                                    </div>
+                                    <p>{{opcion.count}}</p>
+                                </div>
+                                {% endfor %}
+
+                                {% if filtro_actual %}
+                                <div class="formu-container">
+                                    <button type="button" class="clear-filter-btn" onclick="clearFilters()">
+                                        <i class="fas fa-times"></i> Limpiar filtros
+                                    </button>
+                                </div>
+                                {% endif %}
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cards">
+                <div class="my-col-xl-9 my-col-lg-9 my-col-md-9 my-col-sm-12 my-col-12"
+                    style="background-color: rgb(240, 235, 235);">
+                    {% if data_products %}
+                    {% for data_post in data_products %}
+                    <div class="my-col-xl-4 my-col-lg-4 my-col-md-4 my-col-sm-6 my-col-12"
+                        style=" margin-bottom: 25px;">
+                        <div class="container-products">
+                            {% if data_post.destacado %}
+                            <div class="product-badge">
+                                <i class="fas fa-star"></i> Destacado
+                            </div>
+                            {% endif %}
+
+                            <div class="color-div">
+                                <img src="{{data_post.imagen.url}}" alt="tienda producto">
+                                <p>{{data_post.create}} | por: Finca Altavista</p>
+                            </div>
+                            <div class="color-div opt" style="margin-top: 15px;">
+                                <h3>{{data_post.titulo}}</h3>
+                                <p class="product-description">{{data_post.contenido}}</p>
+
+                                <div class="product-info">
+                                    <div class="product-price">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="price">S/ {{data_post.precio}}</span>
+                                    </div>
+
+                                    <div class="product-details">
+                                        <p><i class="fas fa-weight"></i> <strong>Peso:</strong> {{data_post.peso}}g</p>
+
+                                        {% if data_post.molidos %}
+                                        <p><i class="fas fa-mortar-pestle"></i> <strong>Molido:</strong>
+                                            {{data_post.molidos.categoria_molido}}</p>
+                                        {% endif %}
+
+                                        {% if data_post.granos.all %}
+                                        <p><i class="fas fa-seedling"></i> <strong>Grano:</strong>
+                                            {% for grano in data_post.granos.all %}
+                                            {{grano.categoria_grano}}{% if not forloop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </p>
+                                        {% endif %}
+
+                                        <p
+                                            class="stock-status {% if data_post.stock %}in-stock{% else %}out-stock{% endif %}">
+                                            <i class="fas fa-box"></i>
+                                            {% if data_post.stock %}
+                                            <strong>En Stock</strong>
+                                            {% else %}
+                                            <strong>Agotado</strong>
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="my-col-xl-12 my-col-lg-12 my-col-md-12 my-col-sm-12 my-col-12">
+                        <div class="no-products">
+                            <i class="fas fa-search"></i>
+                            <h3>No se encontraron productos</h3>
+                            <p>Intenta con otros filtros o términos de búsqueda</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script>
+    function clearFilters() {
+        const form = document.getElementById('filterForm');
+        const radioButtons = form.querySelectorAll('input[name="grano"]');
+        radioButtons.forEach(radio => radio.checked = false);
+        form.submit();
+    }
+</script>
+
+{% endblock %}

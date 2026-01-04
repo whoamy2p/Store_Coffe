@@ -1,0 +1,18 @@
+# Entornos Virtuales
+@kriptom3.9/
+
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+
+# Static files (si se usa collectstatic)
+staticfiles/

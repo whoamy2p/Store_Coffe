@@ -26,8 +26,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '1v-@#ohl&-lt4i98u)@%zf5c%5-tst0#7cvba
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
-CSRF_TRUSTED_ORIGINS = ['https://coffestore.up.railway.app', 'coffestore.up.railway.app']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,.railway.app,.up.railway.app').split(',')
+CSRF_TRUSTED_ORIGINS = ['https://coffestore.up.railway.app', 'https://*.railway.app']
 
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False

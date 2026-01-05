@@ -234,6 +234,7 @@ div.border-circle+p {
     section.title-nosotros div div.rows-1>p {
         font-size: 0.95rem;
         text-indent: 1.5em;
+        text-align: left;
     }
 
     section.box {

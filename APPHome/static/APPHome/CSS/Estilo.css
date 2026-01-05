@@ -213,10 +213,14 @@ header {
 
 header img {
     width: 100%;
-    height: auto;
+    height: 450px;
+    /* Altura máxima controlada para desktop */
     display: block;
     object-fit: cover;
+    object-position: center;
 }
+
+
 
 /* ========================================
    FOOTER
@@ -500,12 +504,16 @@ footer .rows nav {
     .my-col-md-0 {
         display: none;
     }
+
+    header img {
+        height: 350px;
+    }
 }
 
 /* ========================================
    MEDIA QUERIES - TELÉFONOS HORIZONTAL
    ======================================== */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (max-width: 767px) {
     .my-col-sm-12 {
         width: 100%;
     }
@@ -599,6 +607,7 @@ footer .rows nav {
     .navbar-menu .nav-link {
         padding: 15px 20px;
         border-radius: 0;
+        text-align: center;
     }
 
     .navbar-brand a {
@@ -664,16 +673,6 @@ footer .rows nav {
 
     .my-col-0 {
         display: none;
-    }
-
-    nav ul.styles {
-        flex-direction: column;
-    }
-
-    nav ul.styles li {
-        width: 100%;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-        border-left: none !important;
     }
 
     header img {

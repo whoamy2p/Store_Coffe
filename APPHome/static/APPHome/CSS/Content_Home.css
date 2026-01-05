@@ -37,7 +37,7 @@ article#text p {
 }
 
 #img1 {
-    width: 70%;
+    width: 90%;
     margin: 20px auto;
     border-radius: 15px;
     overflow: hidden;
@@ -246,18 +246,19 @@ img[alt="Productos"] {
     }
 
     article#text {
-        padding: 15px 20px;
+        padding: 15px 15px;
     }
 
     article#text p {
         font-size: 0.95rem;
+        text-align: left;
     }
 
     img[alt="cafetalero"],
     img[alt="tostadora"],
     img[alt="cafee"] {
         width: 100%;
-        height: 280px;
+        height: 220px;
     }
 
     .width-border {

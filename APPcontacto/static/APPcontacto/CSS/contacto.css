@@ -6,9 +6,21 @@
 /* ========================================
    CONTENEDOR PRINCIPAL
    ======================================== */
+.content-wrapper {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+}
+
 .pdg-col-1 {
     width: 100%;
     margin: 0 auto;
+    padding: 25px;
+}
+
+.contact-info-wrapper {
+    width: 100%;
     padding: 25px;
 }
 
@@ -329,8 +341,14 @@ nav.redes- ul li {
         margin: 15px 0 20px;
     }
 
-    .pdg-col-1 {
-        padding: 15px 10px;
+    .pdg-col-1,
+    .contact-info-wrapper {
+        padding: 15px 5px;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        padding: 0 10px;
     }
 
     .pdg-col-1 div>p {
@@ -370,6 +388,22 @@ nav.redes- ul li {
 
     .pdg-col-1>p {
         font-size: 0.95rem;
+    }
+
+    /* Mejora de formulario en micro-móvil */
+    form#form-email table,
+    form#form-email table tr,
+    form#form-email table tr td {
+        display: block;
+        width: 100%;
+    }
+
+    form#form-email table tr th {
+        display: none;
+    }
+
+    form#form-email table tr td {
+        padding: 0 0 10px 0;
     }
 
     #mapa {

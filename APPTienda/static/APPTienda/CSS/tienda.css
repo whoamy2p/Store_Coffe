@@ -255,10 +255,10 @@ aside div form .center-form button>.fas {
    CONTENEDOR DE PRODUCTOS
    ======================================== */
 #mgn {
-    width: 95%;
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 /* ========================================
@@ -530,11 +530,12 @@ img[alt^="tienda"]+p {
     }
 
     aside form .center-form {
-        width: 95%;
+        width: 100%;
     }
 
     img[alt^="tienda"] {
-        height: 220px;
+        height: auto;
+        min-height: 200px;
     }
 
     .container-products div.opt>h3 {
